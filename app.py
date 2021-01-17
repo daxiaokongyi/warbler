@@ -254,7 +254,7 @@ def edit_profile():
         flash("Access unauthorized.", "danger")
         return redirect("/")
 
-    form = UserEditForm()
+    form = UserEditForm(obj=g.user)
 
     user = g.user
     old_username = user.username
